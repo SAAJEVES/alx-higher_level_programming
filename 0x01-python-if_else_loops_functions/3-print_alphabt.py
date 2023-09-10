@@ -2,4 +2,3 @@
 for i in "abcdefghijklmnopqrstuvwxyz":
     if i not in "qe":
         print("{:s}".format(i), end="")
-print()
