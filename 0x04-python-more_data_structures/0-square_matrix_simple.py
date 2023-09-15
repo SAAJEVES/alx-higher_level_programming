@@ -6,6 +6,6 @@ def square_matrix_simple(matrix=[]):
     else:
         num = []
         for row in matrix:
-            a = list(map(lambda x: x *x, row))
+            a = list(map(lambda x: x * x, row))
             num.append(a)
         return num
