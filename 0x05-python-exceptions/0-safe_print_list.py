@@ -21,6 +21,6 @@ def safe_print_list(my_list=[], x=0):
         if num == x:
             break;
     print()
-    return num - 1
+    return my_list[num - 1]
 
 my_list = [1, 2, 3, 4, 5]
