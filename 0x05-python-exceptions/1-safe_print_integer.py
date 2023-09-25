@@ -8,7 +8,6 @@ def safe_print_integer(value):
     Returns:
         An integer if value is an integer.
     """
-
     try:
         print("{:d}".format(value))
         return True
