@@ -16,9 +16,9 @@ class Square:
             size(int): size of the square
         """
         try:
-            if self.__size < 0:
+            if size < 0:
                 raise ValueError
-            elif type(self.__size) != int:
+            elif type(size) != int:
                 raise TypeError
             else:
                 self.__size = size
