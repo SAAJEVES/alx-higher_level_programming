@@ -1,16 +1,9 @@
 
 #!/usr/bin/python3
 
-"""This module contains a class called Square
-
-Attributes:
-    Square (class):
-"""
+"""This module contains a class called Square"""
 
 
-class Square(object):
-    """An empty class Square
-
-    Attributes:
-    """
+class Square:
+    """An empty class Square"""
     pass
