@@ -15,7 +15,7 @@ class Square:
         Args:
             size(int): size of the square
         """
-        slef.__size = size
+        self.__size = size
         if size < 0:
             raise ValueError("size must be greater than 0")
         if type(size) != int:
