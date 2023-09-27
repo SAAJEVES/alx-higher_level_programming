@@ -2,6 +2,7 @@
 
 """Define a class and also initializes it"""
 
+
 class Square:
     """A square class
 
