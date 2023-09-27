@@ -6,5 +6,8 @@ Attributes:
     Square (class):
 """
 class Square(object):
-    """An empty class Square"""
+    """An empty class Square
+
+    Attributes:
+    """
     pass
