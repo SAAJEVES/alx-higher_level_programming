@@ -15,6 +15,3 @@ def append_write(filename="", text=""):
     with open(filename, mode='a', encoding='utf-8') as file:
         num_of_char = file.write(text)
         return num_of_char
-
-nb_characters_added = append_write("file_append.txt", "This School is so cool!\n")
-print(nb_characters_added)
