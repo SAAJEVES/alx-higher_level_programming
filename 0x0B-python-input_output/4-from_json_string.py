@@ -13,6 +13,5 @@ def from_json_string(my_str):
     Returns:
         returns an object (python data structure)
     '''
-    json_str = StringIO(my_str)
-    python_str = json.load(json_str)
+    python_str = json.load(my_str)
     return python_str
