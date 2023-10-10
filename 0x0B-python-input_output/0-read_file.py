@@ -4,8 +4,6 @@
 def read_file(filename=""):
     '''Reads a Text file and prints it out to the standard Output'''
 
-    try:
-        with open(filename, mode='r', encoding='utf-8') as file:
-            print(file.read())
-    except:
-        print("An error occurred");
+    with open(filename, mode='r', encoding='utf-8') as file:
+        for line in file:
+            print(line, end="")
