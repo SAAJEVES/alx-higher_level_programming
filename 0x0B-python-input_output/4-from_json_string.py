@@ -1,7 +1,6 @@
 #!/usr/bin/pyhton3
 
 '''function that returns an object (Python data structure) represented by a JSON string'''
-from io import StringIO
 import json
 
 def from_json_string(my_str):
@@ -13,5 +12,5 @@ def from_json_string(my_str):
     Returns:
         returns an object (python data structure)
     '''
-    python_str = json.loads(my_str)
+    python_str = json.load(my_str)
     return python_str
