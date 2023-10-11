@@ -15,7 +15,6 @@ def append_after(filename="", search_string="", new_string=""):
     Returns:
         None
     '''
-    new_words = []
     with open(filename, mode="r", encoding="utf-8") as file:
         words = file.readlines()
         new_words = words[:]
