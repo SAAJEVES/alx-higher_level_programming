@@ -15,7 +15,7 @@ class Student:
 
         if attrs == None:
             json_dict["first_name"] = self.first_name
-            json_dict["lastname"] = self.last_name
+            json_dict["last_name"] = self.last_name
             json_dict["age"] = self.age
             return json_dict
         for attr in attrs:
