@@ -12,5 +12,5 @@ class Student:
 
     def to_json(self):
         '''retrieves a dictionary representation of a Student instance'''
-        return ({"first_name": self.first_name, /
-                "last_name": self.last_name, "age": self.age})
+        return {"first_name": self.first_name, /
+                "last_name": self.last_name, "age": self.age}
