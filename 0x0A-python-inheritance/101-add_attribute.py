@@ -9,6 +9,8 @@ def add_attribute(obj, attr, val):
     have new attribute'''
     if isinstance(obj, str) or isinstance(obj, tuple) or isinstance(obj, int):
         raise TypeError("can't add new attribute")
+    elif isinstance(obj, dict) or isinstance(obj, list) or isinstance(obj, set):
+        raise TypeError("can't add new attribute")
     elif hasattr(obj, attr):
         raise TypeError("can't add new attribute")
     else:
