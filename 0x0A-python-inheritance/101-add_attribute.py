@@ -7,7 +7,7 @@ def add_attribute(obj, attr, val):
     '''Raise a TypeError exception, with the message
     can't add new attribute if the object can’t 
     have new attribute'''
-    if isinstance(obj, str):
+    if isinstance(obj, str) or isinstance(obj, tuple) or isinstance(obj, int):
         raise TypeError("can't add new attribute")
     elif hasattr(obj, attr):
         raise TypeError("can't add new attribute")
