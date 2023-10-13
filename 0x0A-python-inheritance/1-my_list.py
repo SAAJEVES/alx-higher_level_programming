@@ -6,7 +6,6 @@
 class MyList(list):
     '''MyList inherits from list'''
 
-
     def print_sorted(self):
         '''sorts the list in ascending order'''
         sorted_list = sorted(self)
