@@ -12,14 +12,8 @@ class MyInt(int):
 
     def __eq__(self, another):
         '''Magic Method Equal to'''
-        if self.num == another:
-            return False
-        else:
-            return True
+        return not super().__eq__(another)
 
     def __ne__(self, another):
         '''Magic Method Not Equal to'''
-        if self.num != another:
-            return False
-        else:
-            return True
+        return not super().__ne__(another)
