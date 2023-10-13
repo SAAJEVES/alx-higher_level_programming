@@ -20,4 +20,3 @@ class Square(Rectangle):
     def __str__(self):
         '''Printed Object'''
         return f"[Square] {self.__size}/{self.__size}"
-
