@@ -93,9 +93,15 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """Draw a rectangle shape made of #"""
-        for h in range(0, self.height):
-            print('#' * self.width)
+        """print in stdout"""
+         for _ in range(self.__y):
+            print("")
+        for x in range(self.__height):
+            for _ in range(self.__x):
+                print(" ", end="")
+            for y in range(self.__width):
+                print('#', end="")
+            print()
 
     def __str__(self):
         """Magic Method for str"""
