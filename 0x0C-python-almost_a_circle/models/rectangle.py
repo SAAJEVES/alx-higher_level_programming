@@ -94,7 +94,7 @@ class Rectangle(Base):
 
     def display(self):
         """print in stdout"""
-         for _ in range(self.__y):
+        for _ in range(self.__y):
             print("")
         for x in range(self.__height):
             for _ in range(self.__x):
@@ -105,4 +105,5 @@ class Rectangle(Base):
 
     def __str__(self):
         """Magic Method for str"""
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.height}"
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}\
+                - {self.__width}/{self.height}"
