@@ -96,3 +96,7 @@ class Rectangle(Base):
         """Draw a rectangle shape made of #"""
         for h in range(0, self.height):
             print('#' * self.width)
+
+    def __str__(self):
+        """Magic Method for str"""
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.height}"
