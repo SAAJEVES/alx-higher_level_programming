@@ -2,6 +2,7 @@
 
 '''Creating Base Class'''
 
+from json import dumps
 
 class Base:
     '''A class called Base'''
@@ -14,3 +15,11 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Static method that converts to JSON object"""
+        if list_dictionaries is None:
+            return "[]"
+        return dumps(list_dictionaries)
+
