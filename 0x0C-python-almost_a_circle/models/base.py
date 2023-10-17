@@ -44,3 +44,13 @@ class Base:
         json_string = cls.to_json_string(list_dicts)
         with open(filename, 'w') as file:
             file.write(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set"""
+        if cls.__name__ == "Rectangle":
+            an_instance = cls(1, 1)
+        elif cls.__name__ == "Square":
+            an_instance = cls(1)
+        an_instance.update(**dictionary)
+        return an_instance
