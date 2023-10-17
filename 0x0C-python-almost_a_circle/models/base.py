@@ -4,6 +4,7 @@
 
 from json import dumps
 
+
 class Base:
     '''A class called Base'''
     __nb_objects = 0
@@ -19,7 +20,6 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """Static method that converts to JSON object"""
-        if list_dictionaries is None:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return dumps(list_dictionaries)
-
