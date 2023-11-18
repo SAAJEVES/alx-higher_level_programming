@@ -29,7 +29,10 @@ CREATE TABLE `tv_shows` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;*/
 
--- USE hbtn_0d_tvshows;
+USE hbtn_0d_tvshows;
 SELECT tv_shows.title, tv_show_genres.genre_id 
-FROM tv_shows
+FROM tv_show_genres
+JOIN tv_shows 
+ON tv_show_genres.show_id = tv_shows.id 
 ORDER BY tv_shows.title, tv_show_genres.genre_id;
+
