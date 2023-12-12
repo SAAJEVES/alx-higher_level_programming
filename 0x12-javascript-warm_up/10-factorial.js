@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
-num = parseInt(process.argv[2]);
+const num = parseInt(process.argv[2]);
 
 let result = 1;
 
-function fac(val) {
+function fac (val) {
   if (isNaN(val) && process.argv.length > 2) {
     console.log(NaN);
   } else {
@@ -12,6 +12,6 @@ function fac(val) {
       result = result * i;
     }
   }
-    console.log(result);
+  console.log(result);
 }
 fac(num);
