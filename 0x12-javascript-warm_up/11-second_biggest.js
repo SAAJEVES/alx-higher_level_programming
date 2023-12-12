@@ -11,7 +11,7 @@ function secondLargest (numList) {
       }
     }
   }
-  console.log(parseInt(newNumList[newNumList.length - 2]));
+  console.log(newNumList[newNumList.length - 2]);
 }
 
 if (process.argv.length <= 3) {
