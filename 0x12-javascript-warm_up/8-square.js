@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 if (isNaN(process.argv[2])) {
-  console.log('Missing size')
+  console.log('Missing size');
 }
 
 const num = Math.floor(parseInt(process.argv[2]));
