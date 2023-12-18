@@ -10,11 +10,11 @@ import MySQLdb
 def search():
     conn = MySQLdb.connect(hostname="localhost", username=sys.argv[1],
                            passwd=sys.argv[2], db=sys.argv[3],
-                           state=sys.argv[4], port=3306)
+                           port=3306)
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM states WHERE states.name = {}\
-                ORDER BY states.id".format(state))
+    cur.execute("SELECT * FROM states WHERE states.name = '{}'\
+                ORDER BY states.id".format(sys.argv[4]))
     query_rows = cur.fetchall()
 
     for row in query_rows:
