@@ -7,7 +7,7 @@ import sys
 import MySQLdb
 
 
-def search():
+if __name__ == "__main__":
     conn = MySQLdb.connect(hostname="localhost", username=sys.argv[1],
                            passwd=sys.argv[2], db=sys.argv[3],
                            port=3306)
@@ -21,7 +21,3 @@ def search():
         print(row)
     cur.close()
     conn.close()
-
-
-if __name__ == "__main__":
-    search()
