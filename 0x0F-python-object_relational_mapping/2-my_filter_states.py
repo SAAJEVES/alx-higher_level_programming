@@ -13,7 +13,7 @@ def search():
                            port=3306)
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM states WHERE states.name = '{}'\
+    cur.execute("SELECT * FROM states WHERE states.name LIKE BINARY '{}'\
                 ORDER BY states.id".format(sys.argv[4]))
     query_rows = cur.fetchall()
 
