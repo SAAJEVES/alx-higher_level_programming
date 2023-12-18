@@ -14,13 +14,11 @@ def search():
     cur = conn.cursor()
 
     cur.execute("SELECT * FROM states WHERE states.name = {}\
-                ORDER BY states.id".format(state)
-    #query_rows = cur.fetchall()
-    row = cur.fetchone()
+                ORDER BY states.id".format(state))
+    query_rows = cur.fetchall()
 
-    #for row in query_rows:
-    #    print(row)
-    print(row)
+    for row in query_rows:
+        print(row)
     cur.close()
     conn.close()
 
