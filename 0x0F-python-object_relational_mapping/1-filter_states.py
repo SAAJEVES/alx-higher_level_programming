@@ -22,5 +22,5 @@ def filter_N():
     conn.close()
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     filter_N()
