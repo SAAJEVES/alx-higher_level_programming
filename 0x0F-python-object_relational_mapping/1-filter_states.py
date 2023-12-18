@@ -9,7 +9,7 @@ import sys
 
 def filter_N():
     """Filters through to get states that starts with N"""
-    conn = MySQLdb.connect(host="localhost", user=sys.argv[1]
+    conn = MySQLdb.connect(host="localhost", user=sys.argv[1],
                            passwd=sys.argv[2], db=sys.argv[3],
                            port=3306, charset="utf8")
     cur = conn.cursor()
