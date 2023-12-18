@@ -7,7 +7,7 @@ conn = MySQLdb.connect(host="localhost",
                        charset="utf8")
 cur = conn.cursor()
 
-cur.execute("SELECT * FROM TABLE ORDER BY id ASC")
+cur.execute("SELECT * FROM states ORDER BY states.id ASC")
 query_rows = cur.fetchall()
 
 for row in query_rows:
