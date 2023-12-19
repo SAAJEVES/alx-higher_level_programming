@@ -17,7 +17,7 @@ if __name__ == "__main__":
                                port=3306)
         cur = conn.cursor()
         cur.execute("SELECT * FROM states WHERE states.name LIKE BINARY\
-                    %s",(sys.argv[4],))
+                    %s", (sys.argv[4],))
         query_rows = cur.fetchall()
 
         for row in query_rows:
