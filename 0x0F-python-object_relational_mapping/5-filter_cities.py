@@ -17,7 +17,7 @@ def list_city():
                            db=sys.argv[3])
     cur = conn.cursor()
 
-    cur.execute("SELECT cities.name FROM cities JOIN states ON\
+    cur.execute("SELECT cities.name FROM cities INNER JOIN states ON\
                 cities.state_id = states.id WHERE states.name =  %s\
                 ORDER BY cities.id ASC", (sys.argv[4],))
     query_rows = cur.fetchall()
