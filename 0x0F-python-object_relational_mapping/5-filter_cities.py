@@ -21,7 +21,7 @@ def list_city():
                 cities.state_id = states.id WHERE states.name = %s\
                 ORDER BY cities.id ASC", (sys.argv[4],))
     query_rows = cur.fetchall()
-    list_row = [row[0] for row in list_row]
+    list_row = [row[0] for row in query_rows]
 
     print(*list_row, sep=', ')
     cur.close()
