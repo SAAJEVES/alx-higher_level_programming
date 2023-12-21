@@ -18,8 +18,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    if len(sys.argv) > 4:
-        exit 1
+    if len(sys.argv) != 4:
+        exit(1)
 
     query = session.query(State).order_by(State.id).all()
 
