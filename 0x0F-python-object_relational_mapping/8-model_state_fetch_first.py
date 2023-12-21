@@ -22,9 +22,9 @@ if __name__ == "__main__":
 
     query_first = session.query(State).order_by(State.id).first()
 
-    if query_first:
-        print(f"{query_first.id}: {query_first.name}")
+    if query_first is None:
+        print(f"Nothing")
     else:
-        print("Nothing")
+        print(f"{query_first.id}: {query_first.name}")
 
     session.close()
