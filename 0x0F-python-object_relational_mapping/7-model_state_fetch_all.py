@@ -3,13 +3,11 @@
 a script that lists all State objects from the database hbtn_0e_6_usa
 """
 
-import sys
-from model_state import Base, State
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
-
 if __name__ == "__main__":
+    import sys
+    from model_state import Base, State
+    from sqlalchemy import create_engine
+    from sqlalchemy.orm import sessionmaker
     if len(sys.argv) != 4:
         sys.exit(1)
 
