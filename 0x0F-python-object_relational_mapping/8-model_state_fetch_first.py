@@ -20,7 +20,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session = Session()
 
-    query_first = session.query(State).order_by(State.id).first()
+    query_first = session.query(State).first()
 
     if query_first is None:
         print("Nothing")
