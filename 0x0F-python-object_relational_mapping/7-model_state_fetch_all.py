@@ -8,8 +8,9 @@ if __name__ == "__main__":
     from model_state import Base, State
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
+
     if len(sys.argv) != 4:
-        exit(1)
+        sys.exit(1)
 
     engine = create_engine(
             'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
@@ -20,9 +21,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session = Session()
 
-    query = session.query(State).order_by(State.id).all()
+    query_all = session.query(State).order_by(State.id).all()
 
-    for row in query:
+    for row in query_all:
         print(f"{row.id}: {row.name}")
 
     session.close()
