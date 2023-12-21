@@ -24,9 +24,9 @@ if __name__ == "__main__":
     search = sys.argv[4]
 
     with Session() as session:
-        query_name = session.query(State).filter(State.name.like(search)).one()
+        query_name = session.query(State).filter(State.name.like(search)).all()
 
-        if query_name:
-            print(query_name.id)
-        else:
+        if len(query_name) == 0:
             print("Not found")
+        else:
+            print(query_name[0].id)
