@@ -22,7 +22,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     with Session() as session:
-        new_row = State(name=“Louisiana”)
+        new_row = State(name='Louisiana')
         session.add(new_row)
         newly_added = session.query(State).filter_by(name="Louisiana").one()
         print(newly_added.id)
