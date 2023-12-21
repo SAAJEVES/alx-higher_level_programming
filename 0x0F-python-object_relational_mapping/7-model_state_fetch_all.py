@@ -9,7 +9,7 @@ if __name__ == "__main__":
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
     if len(sys.argv) != 4:
-        sys.exit(1)
+        exit(1)
 
     engine = create_engine(
             'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
