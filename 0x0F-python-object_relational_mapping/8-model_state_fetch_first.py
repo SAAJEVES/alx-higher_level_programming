@@ -6,7 +6,7 @@ script that prints the first State object from the database hbtn_0e_6_usa
 if __name__ == "__main__":
     import sys
     from model_state import Base, State
-    from sqlalchemy import sessionmaker
+    from sqlalchemy.orm import sessionmaker
     from sqlalchemy import create_engine
 
     if len(sys.argv) != 4:
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     query_first = session.query(State).order_by(State.id).first()
 
     if query_first is None:
-        print(f"Nothing")
+        print("Nothing")
     else:
         print(f"{query_first.id}: {query_first.name}")
 
