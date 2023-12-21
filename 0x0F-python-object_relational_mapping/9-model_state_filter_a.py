@@ -22,7 +22,9 @@ if __name__ == "__main__":
     session = Session()
 
     query_a = session.query(State).filter(State.name.like('%a%'))\
-        .order_by(State.id).all()
+        .order_by(State.id)
 
     for row_a in query_a:
         print(f"{row_a.id}: {row_a.name}")
+
+    session.close()
