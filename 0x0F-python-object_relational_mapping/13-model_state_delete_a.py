@@ -25,4 +25,4 @@ if __name__ == "__main__":
         order_by(State.id)
 
         for row_a in query_a:
-            session.delete(row)
+            session.delete(row_a)
