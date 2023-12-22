@@ -19,4 +19,4 @@ class City(Base):
     state = relationship('State', back_populate="cities")
 
 
-State.cities = relation('City', order_by=City.id, backpopulate="state")
+State.cities = relation('City', backpopulate="state")

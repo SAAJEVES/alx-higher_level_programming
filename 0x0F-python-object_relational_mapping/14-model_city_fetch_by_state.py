@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     with Session() as session:
         query_res = session.query(State.name, City.id, City.name)\
-                .filter(State.id == City.state_id)
+                .join(City, State.id == City.state_id)
 
         for val in query_res:
             print(f"{val[0]}: {val[1]} {val[2]}")
