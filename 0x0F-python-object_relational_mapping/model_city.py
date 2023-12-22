@@ -14,9 +14,9 @@ class City(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, nullable=False, ForeignKey='states.id')
+    state_id = Column(Integer, nullable=False, ForeignKey('states.id'))
 
-    state = relationship('State', back_populate="cities")
+    state = relationship('State', back_populates="cities")
 
 
-State.cities = relationship('City', backpopulate="state")
+State.cities = relationship('City', backpopulates="state")
