@@ -4,8 +4,9 @@ Python file similar to model_state.py named model_city.py
 that contains the class definition of a City
 '''
 
-from model_state import Base
+from model_state import Base, State
 from sqlalchemy import ForeignKey, Column, Integer, String
+from sqlalchemy.orm import relationship
 
 
 class City(Base):
@@ -17,3 +18,7 @@ class City(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
+
+    states = relationship("State", back_populates='cities')
+
+State.cities = relationship("City", back_populates='states')
