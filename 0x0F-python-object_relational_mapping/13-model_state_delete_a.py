@@ -25,3 +25,4 @@ if __name__ == "__main__":
 
         for row_a in query_a:
             session.delete(row_a)
+        session.commit()
