@@ -10,6 +10,9 @@ from sqlalchemy.orm import relationship
 
 
 class City(Base):
+    '''
+    Class City derived from Class Base
+    '''
     __tablename__ = 'cities'
 
     id = Column(Integer, primary_key=True)
