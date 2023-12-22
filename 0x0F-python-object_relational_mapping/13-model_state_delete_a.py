@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     with Session() as session:
         query_a = session.query(State).filter(State.name.like('%a%'))
-        order_by(State.id)
+        .order_by(State.id)
 
         for row_a in query_a:
             session.delete(row_a)
