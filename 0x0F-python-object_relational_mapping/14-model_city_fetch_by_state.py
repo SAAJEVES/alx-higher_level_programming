@@ -22,7 +22,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     with Session() as session:
-        query_res = session.query(State.name, City.id, City.name)\
+        query_res = session.query(State.name, City.id, City.name)
                 .join(City, State.id == City.state_id)
 
         for val in query_res:
