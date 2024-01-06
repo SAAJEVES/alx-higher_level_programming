@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Find Peak"""
 
-
+'''
 def find_peak(list_of_integers):
     """
     identifying the largest number amongst
@@ -19,3 +19,14 @@ def find_peak(list_of_integers):
         if num > max_value:
             max_value = num
     return max_value
+'''
+
+
+def find_peak(list_of_integers):
+    """BRUTE force implementation for question
+    """
+    max_i = None
+    for ele in list_of_integers:
+        if max_i is None or max_i < ele:
+            max_i = ele
+    return max_i
