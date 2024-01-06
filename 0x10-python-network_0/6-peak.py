@@ -7,11 +7,10 @@ def find_peak(list_of_integers):
     identifying the largest number amongst
     """
 
-    check_list = isinstance(list_of_integers, list)
-    if False:
+    if not isinstance(list_of_integers, list):
         return None
 
-    if len(list_of_integers) == 0:
+    if not list_of_integers:
         return None
 
     max_value = list_of_integers[0]
