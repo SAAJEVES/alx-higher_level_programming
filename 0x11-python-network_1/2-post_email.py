@@ -22,5 +22,5 @@ if __name__ == "__main__":
     req = urllib.request.Request(site, data_email)
 
     with urllib.request.urlopen(req) as resp:
-        resp_value = response.read()
+        resp_value = resp.read()
         print(resp_value.decode('utf-8'))
