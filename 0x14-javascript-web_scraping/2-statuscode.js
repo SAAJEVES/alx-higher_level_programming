@@ -11,5 +11,9 @@ const cliArg = process.argv;
 const url = cliArg[2];
 
 nrequest(url, (err, response) => {
+  if (err) {
+    console.log(error.message);
+    return;
+  }
   console.log('code:', response.statusCode);
 });
