@@ -8,8 +8,12 @@ script that display the status code of a GET request.
 */
 const nrequest = require('request');
 const cliArg = process.argv;
-const url = cliArg[2]
+const url = cliArg[2];
 
 nrequest(url, (err, response, body) => {
-  console.log('Code', response.statusCode)
+  if (err) {
+    console.log('Error occurred:', err.message);
+    return;
+  }
+  console.log('Code', response.statusCode);
 });
