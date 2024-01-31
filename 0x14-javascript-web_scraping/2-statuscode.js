@@ -10,10 +10,6 @@ const nrequest = require('request');
 const cliArg = process.argv;
 const url = cliArg[2];
 
-nrequest(url, (err, response, body) => {
-  if (err) {
-    console.log('Error occurred:', err.message);
-    return;
-  }
-  console.log('Code', response.statusCode);
+nrequest(url, (err, response) => {
+  console.log('code:', response.statusCode);
 });
