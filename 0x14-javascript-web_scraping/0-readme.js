@@ -9,8 +9,8 @@ const fileName = process.argv[2];
 
 nfs.readFile(fileName, 'utf-8', (err, data) => {
   if (err) {
-    console.log("Error occurred:", err);
-	  return;
+    console.log('Error occurred:', err);
+    return;
   }
   console.log(data);
-})
+});
