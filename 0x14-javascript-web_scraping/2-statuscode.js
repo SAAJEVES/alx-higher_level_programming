@@ -10,8 +10,8 @@ const nrequest = require('request');
 const cliArg = process.argv;
 const url = cliArg[2];
 
-nrequest(url, (err, response) => {
-  if (err) {
+nrequest(url, (error, response) => {
+  if (error) {
     console.log(error.message);
     return;
   }
