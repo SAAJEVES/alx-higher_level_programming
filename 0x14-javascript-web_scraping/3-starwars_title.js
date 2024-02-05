@@ -10,11 +10,11 @@ const cliArg = process.argv;
 const id = process.argv[2];
 const api = `https://swapi-api.alx-tools.com/api/films/${id}`;
 
-nreq(api, (err, resp) => {
+nreq(api, (err, resp, body) => {
   if (err) {
     console.log(err.message);
     return;
   }
-  result = JSON.parse(resp);
+  result = JSON.parse(body);
   console.log(result.title);
 });
