@@ -7,7 +7,7 @@ script that prints the title of a Star Wars movie where the episode number match
 */
 const nreq = require('request');
 const cliArg = process.argv;
-const id = process.argv[2];
+const id = cliArg[2];
 const api = `https://swapi-api.alx-tools.com/api/films/${id}`;
 
 nreq(api, (err, resp, body) => {
@@ -15,6 +15,6 @@ nreq(api, (err, resp, body) => {
     console.log(err.message);
     return;
   }
-  result = JSON.parse(body);
+  const result = JSON.parse(body);
   console.log(result.title);
 });
