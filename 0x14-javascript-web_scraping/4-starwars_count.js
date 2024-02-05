@@ -15,11 +15,11 @@ nreq(api, (err, resp, body) => {
     console.log(err.message);
     return;
   }
-  let times;
-  const body = JSON.parse(body).results;
+  let times = 0;
+  const result = JSON.parse(body).results;
 
-  for (let i = 0; i < body.length; ++i) {
-    const characters = body[i].characters;
+  for (let i = 0; i < result.length; ++i) {
+    const characters = result[i].characters;
 
     for (let j = 0; j < characters.length; ++j) {
       const character = characters[j];
@@ -30,4 +30,5 @@ nreq(api, (err, resp, body) => {
       }
     }
   }
+  console.log(times);
 });
